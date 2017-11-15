@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>浙大电子班牌</title>
+    <script src="./zepto.js"></script>
+    <style>
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        font-family: "宋体", "微软雅黑";
+        font-size: 20px;
+        overflow: hidden;
+    }
+
+    table {
+        width: 100%;
+        height: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        table-layout: fixed;
+    }
+
+    table thead {
+        background-color: #01355d;
+        color: #fff;
+    }
+
+    table thead td {
+        border-right: 3px solid #76a7ce;
+    }
+
+    table tr.stripped {
+        background-color: #efedee;
+    }
+
+    .text-overflow {
+        overflow: hidden;
+        white-space: nowrap;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+
+
+    @-webkit-keyframes slideInUp {
+        from {
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+            visibility: visible;
+        }
+
+        to {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes slideInUp {
+        from {
+            -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+            visibility: visible;
+        }
+
+        to {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .slideInUp {
+        -webkit-animation: slideInUp 1s;
+        animation: slideInUp 1s;
+    }
+
+    @media screen and (min-width:1000px) {
+        body {
+            font-size: 30px;
+        }
+    }
+
+    @media screen and (min-width:1600px) {
+        body {
+            font-size: 40px;
+        }
+    }
+    /*@media screen and (max-width: 300px) {
+    body {
+        background-color:lightblue;
+    }*/
+    /*}*/
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td width="20%">时间</td>
+                <td width="50%">课程名称</td>
+                <td>讲师</td>
+                <td>学生数</td>
+            </tr>
+        </thead>
+        <tbody>
+            <!--  <tr>
+                <td>9:00-10:00</td>
+                <td class="text-overflow">马克思主义哲学</td>
+                <td>姜涛</td>
+                <td>234</td>
+            </tr>
+            <tr>
+                <td>9:00-10:00</td>
+                <td>马克思主义哲学</td>
+                <td>姜涛</td>
+                <td>234</td>
+            </tr>
+            <tr>
+                <td>9:00-10:00</td>
+                <td>马克思主义哲学</td>
+                <td>姜涛</td>
+                <td>234</td>
+            </tr>
+            <tr>
+                <td>9:00-10:00</td>
+                <td>马克思主义哲学</td>
+                <td>姜涛</td>
+                <td>234</td>
+            </tr>
+            <tr>
+                <td>9:00-10:00</td>
+                <td>马克思主义哲学</td>
+                <td>姜涛</td>
+                <td>234</td>
+            </tr> -->
+        </tbody>
+    </table>
+    <script>
+    $(function() {
+        var searches = location.search.slice(1).split('=')
+        var room = searches[1]
+        if (!room) {
+            alert('您的url地址中没有配置room名称');
+            return;
+        }
+        var cache = []
+        var index = 0
+        var stripeFun = function() {
+            var height = $('table').height()
+            $('tr').each(function(index) {
+                console.log(height)
+                $(this).height(height / 6)
+                if (index % 2 == 0 && index !== 0) {
+                    $(this).addClass('stripped')
+                }
+            })
+        }
+        stripeFun()
+        //通过ajax获取数据
+        var getData = function(fn) {
+            return $.ajax({
+                type: 'get',
+                dataType: 'json',
+                url: 'http://10.78.224.193:8080/baiYunConference/getTeacherContent.do?room='+ room,
+                success: function(res) {
+                    //console.log(res)
+                    fn && fn(res)
+                },
+                error: function() {
+                    alert('有未知错误');
+                }
+            })
+
+        }
+
+
+
+        //数组字符串切换
+        var slidePage = function() {
+            if (cache.length) {
+                renderPage()
+            } else {
+                getData(function(res) {
+                    // if (res.rescode == 200) {
+
+                    var len = res.list.length
+                    var num = -1
+                    for (i = 0; i < len; i++) {
+                        if (i % 5 == 0) {
+                            cache[++num] = '<tr><td>' + res.list[i].time + '</td><td class="text-overflow">' + res.list[i].course + '</td><td>' + res.list[i].teacher + '</td><td>' + res.list[i].studentNum + '</td></tr>';
+                        } else {
+                            cache[num] += '<tr><td>' + res.list[i].time + '</td><td class="text-overflow">' + res.list[i].course + '</td><td>' + res.list[i].teacher + '</td><td>' + res.list[i].studentNum + '</td></tr>'
+                        }
+                    }
+                    var add = 5 - len % 5;
+                    if (add != 5) {
+                        for (var j = 0; j < add; j++) {
+                            cache[num] += '<tr><td></td><td></td><td></td><td></td></tr>'
+                        }
+                    }
+
+                    renderPage();
+                    console.log(cache);
+                    // } else {
+                    //     throw new Error('有未知错误')
+                    //     //window.reload()
+                    // }
+
+                })
+            }
+        }
+
+
+        var renderPage = function() {
+            console.log(index)
+            console.log(cache.length)
+            var str = cache[index]
+            $('table tbody').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                console.log('hah')
+                $('table tbody').removeClass('slideInUp')
+            });
+            $('table tbody').html(str).addClass('slideInUp');
+            console.log('render')
+            stripeFun()
+            if (index == cache.length - 1) {
+                index = 0
+            } else {
+                index++
+            }
+        }
+
+        slidePage()
+        setInterval(function() {
+            cache = [];
+            index = 0;
+        }, 3600000)
+
+        setInterval(function() {
+            console.log('render2')
+            slidePage()
+        }, 3000)
+        // stripeFun()
+        // var str = '<tr> <td>9:00-10:00</td> <td class="text-overflow">新生研讨课—环境科学与工程领域若干科学问题的研讨</td> <td>武侠里</td> <td>234</td> </tr>  <tr> <td>9:00-10:00</td> <td>马克思主义哲学</td> <td>姜涛</td> <td>234</td> </tr><tr><td>9:00-10:00</td><td class="text-overflow">马克思主义哲学</td><td>姜涛</td><td>234</td></tr> <tr> <td>9:00-10:00</td> <td>马克思主义哲学</td> <td>姜涛</td> <td>234</td> </tr> <tr> <td>9:00-10:00</td> <td>马克思主义哲学</td> <td>姜涛</td> <td>234</td> </tr>'
+        // setTimeout(function() {
+        //     $('table tbody').html(str).removeClass().addClass('slideInUp')
+        //     stripeFun()
+        // }, 3000)
+
+    })
+    </script>
+</body>
+
+</html>
