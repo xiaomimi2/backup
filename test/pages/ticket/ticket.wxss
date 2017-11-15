@@ -1,0 +1,36 @@
+
+
+.ticket-content {
+  padding: 0px 25rpx;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ticket-content-child {
+  width: 100%;
+  height: 83.33rpx;
+  display: flex;
+  box-sizing: border-box;
+  font-size: 25rpx;
+  justify-content: space-between;
+  align-items: center;
+  color: #4a4a4a;
+}
+
+.ticket-content-child image {
+  width: 41.66rpx;
+  height: 41.66rpx;
+  background-color: #ccc;
+}
+
+.ticket-content-child .ticket-picker {
+  width: 130px;
+  text-align: right;
+  flex-grow: 1;
+  margin-right: 4.167rpx;
+  height: 83.33rpx;
+  line-height: 83.33rpx;
+}
+.ticket-content-child  input{
+  flex-grow:1;
+}

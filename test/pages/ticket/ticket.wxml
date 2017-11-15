@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="page-title">
+    <image/>
+    <view class="page-content">
+      <text>预约开票</text>
+      <text>选择续住时间后直接提交订单即可完成续住。</text>
+    </view>
+  </view>
+  <view class="ticket-content">
+    <view class="ticket-content-child">
+      <text>发票类型：</text>
+      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="ticketType" value="{{ticketTypeIndex}}">{{ticketType[ticketTypeIndex]}}</picker>
+      <image/>
+    </view>
+    <view class="ticket-content-child">
+      <text>发票内容：</text>
+      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="ticketContent" value="{{ticketContentIndex}}">{{ticketContent[ticketContentIndex]}}</picker>
+      <image/>
+    </view>
+    <view class="ticket-content-child">
+      <text>发票抬头类型：</text>
+      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="ticketHeaderType" value="{{ticketHeaderTypeIndex}}">{{ticketHeaderType[ticketHeaderTypeIndex]}}</picker>
+      <image/>
+    </view>
+    <view class="ticket-content-child">
+      <text>发票抬头：</text>
+      <input type="text"></input>
+
+    </view>
+    <view class="ticket-content-child">
+      <text>添加税号：</text>
+      <input type="number"></input>
+
+    </view>
+  </view>
+</view>

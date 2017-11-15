@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<template name="list-tem">
+  <view class="sweep">
+    <view class="sweep-group">
+      <view class="sweep-time">立即打扫</view>
+      <view class="sweep-time">11:00</view>
+      <view class="sweep-time">13:00</view>
+    </view>
+    <view class="sweep-group">
+      <view class="sweep-time">15:00</view>
+    </view>
+
+  </view>
+</template>
+<view class="container">
+  <view class="hotel-wrap">
+    <view class="hotel-name">西塘觉色客栈</view>
+  </view>
+
+  <view class="navbar">
+    <navigator  >
+      <image/>酒店超市</navigator>
+    <navigator>
+      <image/>房间续住</navigator>
+    <navigator url="/pages/ticket/ticket">
+      <image/>预约开票</navigator>
+    <navigator url="/pages/reserve/reserve">
+      <image/>房间预定</navigator>
+  </view>
+  <view class="tab">
+    <view class="tab-item" data-name="tel" bindtap="switchServe">
+      <image/>电话求助</view>
+    <view class="tab-item" data-name="complain" bindtap="switchServe">
+      <image/>投诉建议</view>
+    <view class="tab-item" data-name="wifi" bindtap="switchServe">
+      <image/>Wi-Fi</view>
+    <view class="tab-item" data-name="borrow" bindtap="switchServe">
+      <image/>物品借用</view>
+    <view class="tab-item" data-name="sweep" bindtap="switchServe">
+      <image/>房间打扫</view>
+  </view>
+  <view class="tab-content-1" wx:if="{{currentPage === 'tel'}}">
+    <button class="btn-concat" open-type="concat">总机</button>
+    <button class="btn-concat" open-type="concat">宴会预定</button>
+  </view>
+  <view class="tab-content-1" wx:if="{{currentPage === 'sweep'}}">
+    <template is="list-tem"></template>
+    <button class="btn-submit active" open-type="concat">立即提交</button>
+  </view>
+  <view class="tab-content-1" wx:if="{{currentPage === 'borrow'}}">
+    <view class="sweep">
+      <view class="sweep-group">
+        <view class="sweep-time active">苹果充电器</view>
+        <view class="sweep-time">安卓充电器</view>
+        <view class="sweep-time">接线板</view>
+      </view>
+      <view class="sweep-group">
+        <view class="sweep-time">开瓶器</view>
+        <view class="sweep-time">指甲剪</view>
+        <view class="sweep-time">剪刀</view>
+      </view>
+
+    </view>
+    <button class="btn-submit" open-type="concat">立即提交</button>
+  </view>
+  <view class="tab-content-1" wx:if="{{currentPage === 'complain'}}">
+    <view class="complain">
+      <image/>
+      <text>宾客您好，在住店过程中遇到任何问题，都可在此反馈，我们会尽快为您解决，望您住店愉快！</text>
+    </view>
+    <view class="sweep">
+      <view class="sweep-group">
+        <view class="sweep-time active">服务问题</view>
+        <view class="sweep-time">安卓充电器</view>
+        <view class="sweep-time">接线板</view>
+      </view>
+      <view class="sweep-group">
+        <view class="sweep-time">开瓶器</view>
+        <view class="sweep-time">指甲剪</view>
+        <view class="sweep-time">剪刀</view>
+      </view>
+
+    </view>
+    <textarea placeholder-style="font-size:25rpx;" placeholder="请简单描述问题，也可留下您的手机，以便我们帮您解决"></textarea>
+    <button class="btn-submit" open-type="concat">立即提交</button>
+  </view>
+  <view class="tab-content-1" wx:if="{{currentPage === 'wifi'}}">
+    <text class="item-name">WIFI</text>
+    <text class="item-value">Juesekezhan</text>
+    <text class="item-name">密码</text>
+    <text class="item-value">1241234</text>
+  </view>
+  <view class="message">
+    <view class="message-title">公告信息</view>
+    <view class="message-body">
+    </view>
+  </view>
+</view>

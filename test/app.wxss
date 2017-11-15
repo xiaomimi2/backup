@@ -1,0 +1,107 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+view{
+  padding:0;
+  margin:0;
+}
+/*header部分样式*/
+.page-title {
+  width: 100%;
+  padding: 37.5rpx 33.33rpx;
+  box-sizing: border-box;
+  background-color: #2c75ca;
+  height: 187.5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-title image {
+  width: 112.5rpx;
+  height: 112.5rpx;
+  background-color: #ccc;
+}
+
+.page-content {
+  width: 71.66%;
+  color: #fff;
+}
+
+.page-content text {
+  display: block;
+}
+
+.page-content text:nth-child(1) {
+  font-size: 33.33rpx;
+  line-height: 1.375;
+  margin-bottom: 12.5rpx;
+}
+
+.page-content text:nth-child(2) {
+  font-size: 20.833rpx;
+  line-height: 1.1428;
+}
+
+/*日历*/
+.calender{
+  font-size:12px;
+  color:#4A4A4A;
+  width:100%;
+}
+.cal-title{
+  color:#fff;
+  font-size:16px;
+  background-color:#2C75CA;
+  height:50px;
+  line-height: 50px;
+  text-align: center;
+  width:100%;
+}
+.cal-week{
+  display:flex;
+  align-items:center;
+  height:30px;
+}
+.cal-week text{
+  flex-grow:1;
+  text-align: center;
+}
+.cal-date{
+  width:100%;
+  text-align:center;
+  font-size:16px;
+  margin-top:15px;
+}
+.cal-date-list{
+
+}
+.cal-date-list .cal-date-list-group{
+  display:flex;
+  align-items:center;
+}
+.cal-date-list-group text{
+  flex-grow:1;
+  height:20px;
+  text-align: center;
+}
+.cal-live{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  font-size:8px;
+  color:#2C75CA;
+}
+.cal-live-content{
+  font-size:10px;
+  display: block;
+  text-align:center;
+}

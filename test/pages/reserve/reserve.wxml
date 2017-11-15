@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="page-title">
+    <image/>
+    <view class="page-content">
+      <text>房间预定</text>
+      <text>您可在此直接预定其他房间。</text>
+    </view>
+  </view>
+  <template name="calender">
+    <scroll-view scroll-y="true" class="calender">
+      <view class="cal-title">选择日期</view>
+      <view class="cal-week">
+        <text>日</text>
+        <text>一</text>
+        <text>二</text>
+        <text>三</text>
+        <text>四</text>
+        <text>五</text>
+        <text>六</text>
+      </view>
+      <view class="cal-date">2017年11月</view>
+      <view class="cal-date-list">
+        <view class="cal-date-list-group">
+          <text>1</text>
+          <text class="cal-live">2 <text class="cal-live-content">住店</text></text>
+          <text>3</text>
+          <text>4</text>
+          <text>5</text>
+          <text>6</text>
+          <text>7</text>
+        </view>
+      </view>
+    </scroll-view>
+  </template>
+  <template is="calender"></template>
+
+</view>
