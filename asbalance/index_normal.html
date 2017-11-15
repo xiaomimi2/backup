@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>安盛天平</title>
+    <script src="https://cdn.bootcss.com/zepto/1.1.7/zepto.min.js"></script>
+    <style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: STHeitiSC-Medium;
+    }
+
+    .header {
+        height: 21.204%;
+    }
+
+    .main {
+        height: 57.592%;
+    }
+
+    .main table {
+        table-layout: fixed;
+        width: 88.90%;
+        height: 100%;
+        margin: auto;
+        border-collapse: collapse;
+        box-shadow: 0 2px 4px 0 #E4E4E4;
+        border-radius: 5px;
+    }
+
+
+    .main table thead {
+        background-color: #5279BC;
+        font-size: 32px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+    }
+
+
+
+    .main table tbody {
+        font-size: 28px;
+        color: #4A4A4A;
+        letter-spacing: -1.2px;
+    }
+
+    .main table tbody tr:nth-child(even) {
+        background-color: #F3F3F3;
+    }
+
+    .main table td {
+        text-indent: 20px;
+        border: none;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 12.9629%;
+        background-color: #5279BC;
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+    </div>
+    <div class="main">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <td width="20%">会议时间</td>
+                    <td>会议室</td>
+                    <td width="40%">会议主题</td>
+                    <td>预订人</td>
+                    <td>主持人</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td width="15%">2017-11-03 14:00-15:00</td>
+                    <td>会议室三</td>
+                    <td width="40%">财产及工程保险相关法律知识的讲解</td>
+                    <td>蒋小浩</td>
+                    <td>许小珊</td>
+                </tr>
+                <tr>
+                    <td>2017-11-03 14:00-15:00</td>
+                    <td>会议室三</td>
+                    <td>财产及工程保险相关法律知识的讲解</td>
+                    <td>蒋小浩</td>
+                    <td>许小珊</td>
+                </tr>
+                <tr>
+                    <td>2017-11-03 14:00-15:00</td>
+                    <td>会议室三</td>
+                    <td>财产及工程保险相关法律知识的讲解</td>
+                    <td>蒋小浩</td>
+                    <td>许小珊</td>
+                </tr>
+                <tr>
+                    <td>2017-11-03 14:00-15:00</td>
+                    <td>会议室三</td>
+                    <td>财产及工程保险相关法律知识的讲解</td>
+                    <td>蒋小浩</td>
+                    <td>许小珊</td>
+                </tr>
+                <tr>
+                    <td>2017-11-03 14:00-15:00</td>
+                    <td>会议室三</td>
+                    <td>财产及工程保险相关法律知识的讲解</td>
+                    <td>蒋小浩</td>
+                    <td>许小珊</td>
+                </tr>
+                <tr>
+                    <td>2017-11-03 14:00-15:00</td>
+                    <td>会议室三</td>
+                    <td>财产及工程保险相关法律知识的讲解</td>
+                    <td>蒋小浩</td>
+                    <td>许小珊</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="footer"></div>
+    <script>
+    $(function() {
+        var tableH = $('table').height()
+        $('tr').each(function() {
+            $(this).height(tableH / 7)
+        })
+    })
+    </script>
+</body>
+
+</html>
