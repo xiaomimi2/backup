@@ -1,0 +1,315 @@
+@import '../../assets/iconfont/iconfont.wxss';
+.container{
+  background-color: #f6f6f6;
+}
+.hotel_intr {
+  background-color: #fff;
+  font-size: 25rpx;
+  color: #686869;
+  margin-bottom: 20.833rpx;
+  width: 100%;
+}
+
+.hotel_intr navigator {
+  font-size: 25rpx;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  color: #4a4a4a;
+  height: 83.33rpx;
+  line-height: 83.33rpx;
+  border-bottom: 1px solid #ebebeb;
+  font-weight: bold;
+}
+
+.hotel_intr navigator .iconfont {
+  font-size: 25rpx;
+ 
+  font-weight: normal;
+}
+
+.hotel_intr .icon-box {
+  height: 121.875rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 0px 0 #e4e4e4;
+  padding: 0 25rpx;
+  box-sizing: border-box;
+}
+
+.icon-box .icon-box-item {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-right: 50rpx;
+}
+
+
+
+.hotel_intr .icon-box .iconfont {
+  font-size: 41.66rpx;
+  color: #047682;
+}
+
+.goodlist{
+  width:100%;
+  background-color:#fff;
+}
+/*时间选择*/
+
+.time_view {
+  padding: 0px 25rpx;
+  height: 83.333rpx;
+  font-size: 25rpx;
+  color: #4a4a4a;
+  border-bottom: 0.5px solid #ebebeb;
+  display: flex;
+  align-items: center;
+}
+
+.time_view .time_view_date {
+  width: 312.5rpx;
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.time_view .computed_date {
+  color: #047682;
+  font-size: 20.83rpx;
+}
+
+.time_view .iconfont {
+  width: 50rpx;
+  margin-bottom: -1px;
+  flex: none;
+  text-align: right;
+  font-size: 25rpx;
+}
+
+/*预付到付*/
+.goodlistItem {
+  width:100%;
+  height:208.33rpx ;
+  padding: 29.165rpx 25rpx;
+  border: 0rem;
+  border-bottom: 0.5px #ebebeb solid;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.goodlistItem .goodlistItem_image {
+  width: 150rpx;
+  height: 150rpx;
+  -webkit-border-radius: 20.833rpx;
+  border-radius:20.833rpx;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.goodlistItem .goodlistItem_image .picture {
+  width: 58.333rpx;
+  height: 41.666rpx;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  line-height: 58.333rpx;
+  text-align: center;
+  border-radius: 3.33rpx;
+  font-size: 20.833rpx;
+  color: #fff;
+}
+
+.goodlistItem .goodlistItem_image .iconfont {
+  font-size: 27.083rpx;
+  margin-right: 3px;
+}
+
+.goodlistItem_roomDetail {
+  width: 48%;
+  overflow: hidden;
+  padding-left: 4%;
+}
+
+.goodlistItem_buy {
+  float: right;
+  margin-right: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.goodlistItem_buy_price .discount_price {
+}
+
+.goodlistItem_buy_price .original_price {
+  font-size: 20.833rpx;
+  color: #908f91;
+}
+
+.goodlistItem_buy_price_rmb {
+  font-size: 20.833rpx;
+  color: #e95f17;
+}
+
+.goodlistItem_buy_price_price {
+  color: #e95f17;
+  font-size: 29.166rpx;
+  font-weight: 700;
+}
+
+.goodlistItem_buy_price_qi {
+  color: #908f91;
+  font-size: 20.833rpx;
+}
+
+.goodlistItem_buy_buybtn {
+  float: left;
+  width: 1.12rem;
+  height: 0.64rem;
+  line-height: 0.64rem;
+  text-align: center;
+  background: #e3536d;
+  color: #fff;
+  margin-right: 0rem;
+  -webkit-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+  margin-top: 0.43rem;
+  font-size: 0.26rem;
+  font-weight: 700;
+}
+
+.goodlistItem_name {
+  font-weight: 700;
+  font-size: 29.166rpx;
+  width: 333.33rpx;
+  overflow: hidden;
+  color: #4a4a4a;
+  font-family: FZLTHJW-GB1-0;
+  line-height: 1.5;
+}
+
+.goodlistItem_types {
+  background-color: #ececec;
+}
+
+.goodlistItem_types .goodlistItem_types_item1,
+.goodlistItem_types .goodlistItem_types_item2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  padding: 41.666rpx 33.333rpx 37.5rpx 25rpx;
+}
+
+.goodlistItem_types .goodlistItem_types_pre_1 {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+
+.goodlistItem_types .goodlistItem_types_pre_1 .goodlistItem_types_item1_des1 {
+  color: #4a4a4a;
+  font-size: 27.083rpx;
+  line-height: 35.416rpx;
+  margin-bottom:12.5rpx;
+}
+
+.goodlistItem_types .goodlistItem_types_item2 .goodlistItem_types_item1_des1 {
+}
+
+.goodlistItem_types .goodlistItem_types_pre_1 .goodlistItem_types_item1_des2 {
+  color: #09bc08;
+  font-size: 20.833rpx;
+}
+
+.goodlistItem_types .goodlistItem_types_item2 .goodlistItem_types_item1_des2 {
+  color: #e95f17;
+}
+
+.goodlistItem_types .goodlistItem_types_pre_2 {
+  color: #e95f17;
+  font-size: 20.833rpx;
+  padding-right: 33.33rpx;
+}
+
+.goodlistItem_types .goodlistItem_types_pre_2 text {
+  font-size: 27.083rpx;
+}
+
+.goodlistItem_types .goodlistItem_types_pre_3 {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10.416rpx;
+  border: 0.5px solid #e95f17;
+  background-color: #e95f17;
+  overflow: hidden;
+}
+
+.goodlistItem_types.none .goodlistItem_types_pre_3 {
+  border: 0.5px solid #c2c3c4;
+  background-color: #c2c3c4;
+}
+
+.goodlistItem_types .goodlistItem_types_pre_3 .icon-top {
+  width: 93.75rpx;
+  height: 43.75rpx;
+  color: #fff;
+  font-size: 29.166rpx;
+  line-height: 43.75rpx;
+  text-align: center;
+}
+
+.goodlistItem_types .goodlistItem_types_pre_3 .icon-bottom {
+  height: 31.25rpx;
+  width: 93.75rpx;
+  color: #e95f17;
+  font-size: 18.75rpx;
+  background-color: #fff;
+  line-height:31.25rpx;
+  text-align: center;
+}
+
+.goodlistItem_types.none .goodlistItem_types_pre_3 .icon-bottom {
+  color: #c2c3c4;
+}
+
+.goodlistItem_bedStyle {
+  text-align: left;
+  font-size: 25rpx;
+  line-height: 2;
+  color: #959595;
+}
+
+.goodlistItem_roomtag {
+  font-size: 25rpx;
+  line-height: 29.166rpx;
+}
+
+.goodlistItem_roomtag_item {
+  float: left;
+  border: 0.5px #ebebeb solid;
+  text-align: center;
+  font-size: 18.75rpx;
+  -webkit-border-radius: 2px;
+  border-radius: 4px;
+  color: #959595;
+  padding: 4px;
+  margin-right: 4px;
+}
+
+.goodlistItem_buy_buybtn_marginleft {
+  margin-left: 0.1rem;
+}

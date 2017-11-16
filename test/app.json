@@ -4,6 +4,7 @@
     "pages/logs/logs",
     "pages/mine/mine",
     "pages/ticket/ticket",
+    "pages/calender/calender",
     "pages/reserve/reserve"
   ],
   "window":{

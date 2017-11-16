@@ -1,0 +1,35 @@
+ <template name="calender">
+    <view class="calender">
+      <view class="cal-title">选择日期</view>
+      <view class="cal-week">
+        <text>日</text>
+        <text>一</text>
+        <text>二</text>
+        <text>三</text>
+        <text>四</text>
+        <text>五</text>
+        <text>六</text>
+      </view>
+      <block wx:for="{{cals}}" wx:for-item="cal">
+        <view class="cal-date">{{cal.data[0].time}}</view>
+        <view class="cal-date-list">
+          <!-- <view class="cal-notlive"></view>
+          <view class="cal-live">2 <text class="cal-live-content">住店</text></view>  -->
+          <block wx:for="{{cal.data}}" wx:for-index="idx" wx:for-item="date">
+            <view wx:if="{{idx == 0 && date.week > 0}}"></view>
+            <view wx:if="{{idx == 0 && date.week > 1}}"></view>
+            <view wx:if="{{idx == 0 && date.week > 2}}"></view>
+            <view wx:if="{{idx == 0 && date.week > 3}}"></view>
+            <view wx:if="{{idx == 0 && date.week > 4}}"></view>
+            <view wx:if="{{idx == 0 && date.week > 5}}"></view>
+            <view>{{date.day}}</view>
+          </block>
+
+        </view>
+      </block>
+    </view>
+  </template>
+  <view class="container" style="padding-top:80px">
+    <template is="calender" data="{{cals}}"></template>
+  </view>
+  

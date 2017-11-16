@@ -6,32 +6,84 @@
       <text>您可在此直接预定其他房间。</text>
     </view>
   </view>
-  <template name="calender">
-    <scroll-view scroll-y="true" class="calender">
-      <view class="cal-title">选择日期</view>
-      <view class="cal-week">
-        <text>日</text>
-        <text>一</text>
-        <text>二</text>
-        <text>三</text>
-        <text>四</text>
-        <text>五</text>
-        <text>六</text>
+
+  <view class="hotel_intr">
+    <navigator>酒店详情
+      <view class="iconfont icon-jiantou1"></view>
+    </navigator>
+    <view class="icon-box">
+      <view class="icon-box-item"><view class="iconfont icon-icon1"></view>传真机</view>
+      <view class="icon-box-item"><view class="iconfont icon-wifi-"></view>wifi上网</view>
+      <view class="icon-box-item"><view class="iconfont icon-tingche"></view>停车场</view>
+    </view>
+  </view>
+  <view class="goodlist">
+    <view class="time_view">
+      <view class="time_view_date">10月12日-10月20日</view>
+      <view class="computed_date">8晚</view>
+      <view class="iconfont icon-jiantou1"></view>
+    </view>
+    <view class="goodlistItem">
+      <view class="goodlistItem_image" style="background-image:url(https://iqinglv.cleartv.cn/resource/041b2e5190ecb19402a7533ff350bf9c_150296203221.jpg);" data-index="0">
+        <view class="picture">
+          <view class="iconfont icon-tupian1"></view>3</view>
       </view>
-      <view class="cal-date">2017年11月</view>
-      <view class="cal-date-list">
-        <view class="cal-date-list-group">
-          <text>1</text>
-          <text class="cal-live">2 <text class="cal-live-content">住店</text></text>
-          <text>3</text>
-          <text>4</text>
-          <text>5</text>
-          <text>6</text>
-          <text>7</text>
+      <view class="goodlistItem_roomDetail">
+        <view class="goodlistItem_name">特惠双床/大床房</view>
+        <view class="goodlistItem_bedStyle">双人床</view>
+        <view class="goodlistItem_roomtag">
+            <view class="goodlistItem_roomtag_item">情侣</view>
+            <view class="goodlistItem_roomtag_item">亲子</view>
+            <view class="goodlistItem_roomtag_item">商旅</view>
         </view>
       </view>
-    </scroll-view>
-  </template>
-  <template is="calender"></template>
+      <view class="goodlistItem_buy">
+        <view class="goodlistItem_buy_price">
+          <view class="discount_price">
+            <text class="goodlistItem_buy_price_rmb">￥</text>
+            <text class="goodlistItem_buy_price_price">465</text>
+            <text class="goodlistItem_buy_price_qi">起</text>
+          </view>
+          <view class="original_price">门市价
+            <text>¥1180</text>
+          </view>
+        </view>
+      </view>
+      <view>
+        <view class="iconfont icon-xiala two_pay"></view>
+      </view>
+    </view>
+    <view class="goodlistItem_types ">
+      <view class="goodlistItem_types_item1" data-id="454" data-pay="online">
+        <view class="goodlistItem_types_pre_1">
+          <view class="goodlistItem_types_item1_des1">预付价</view>
+          <view class="goodlistItem_types_item1_des2">免费取消</view>
+        </view>
+        <view class="goodlistItem_types_pre_2">
+          <text>¥</text>
+          <text>465</text>
+        </view>
+        <view class="goodlistItem_types_pre_3">
+          <view class="icon-top">订</view>
+          <view class="icon-bottom">在线付</view>
+        </view>
+      </view>
+      <view class="goodlistItem_types_item2" data-id="1" data-pay="offline">
+        <view class="goodlistItem_types_pre_1">
+          <view class="goodlistItem_types_item1_des1">到付价</view>
+          <view class="goodlistItem_types_item1_des2">限时取消</view>
+        </view>
+        <view class="goodlistItem_types_pre_2">
+          <text>¥</text>
+          <text>14</text>
+        </view>
+        <view class="goodlistItem_types_pre_3">
+          <view class="icon-top">订</view>
+          <view class="icon-bottom">到店付</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <navigator url="/pages/calender/calender">这是日历</navigator> -->
 
 </view>

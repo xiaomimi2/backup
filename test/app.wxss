@@ -55,53 +55,75 @@ view{
   font-size:12px;
   color:#4A4A4A;
   width:100%;
+  position:relative;
+  background-color: #f5f5f5;
 }
 .cal-title{
   color:#fff;
   font-size:16px;
-  background-color:#2C75CA;
+  background-color:#099fde;
   height:50px;
   line-height: 50px;
   text-align: center;
   width:100%;
+  position:fixed;
+  top:0;
+  left:0;
 }
 .cal-week{
   display:flex;
   align-items:center;
-  height:30px;
+  background-color: #f7f7f7;
+  position:fixed;
+  top:50px;
+  left:0;
+  width:100%;
 }
 .cal-week text{
   flex-grow:1;
   text-align: center;
+  border-bottom:1px solid #ccc;
+  line-height: 30px;
 }
 .cal-date{
   width:100%;
   text-align:center;
   font-size:16px;
-  margin-top:15px;
+  /* margin-top:10px; */
+  height:40px;
+  line-height:40px;
 }
 .cal-date-list{
-
+  width:100%;
+  background-color: #fff;
 }
-.cal-date-list .cal-date-list-group{
+/* .cal-date-list .cal-date-list-group{
   display:flex;
   align-items:center;
-}
-.cal-date-list-group text{
-  flex-grow:1;
-  height:20px;
+} */
+.cal-date-list view{
+  height:30px;
   text-align: center;
+  width:14.285%;
+  display: inline-block;
+  box-sizing:border-box;
+}
+.cal-notlive{
+  color:#d6d6d6;
 }
 .cal-live{
   display: flex;
   flex-direction:column;
   justify-content: center;
   align-items:center;
-  font-size:8px;
-  color:#2C75CA;
+  font-size:10px;
+  color:#099fde;
+  height:100%;
+  box-sizing:border-box;
 }
 .cal-live-content{
   font-size:10px;
   display: block;
   text-align:center;
+  height:auto;
 }
