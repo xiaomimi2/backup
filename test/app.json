@@ -1,25 +1,31 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/mine/mine",
     "pages/ticket/ticket",
     "pages/calender/calender",
-    "pages/reserve/reserve"
+    "pages/reserve/reserve",
+    "pages/test/test",
+    "pages/rereserve/rereserve",
+    "pages/market/market"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#2C75CA",
     "navigationBarTitleText": "清鹤酒店管家",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle": "#fff"
   },
-  "tabBar":{
-    "list":[{
-      "pagePath":"pages/index/index",
-      "text":"首页"
-    },{
-      "pagePath":"pages/mine/mine",
-      "text":"我的"
-    }]
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
   }
 }

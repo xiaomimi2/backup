@@ -107,19 +107,17 @@ view{
   width:14.285%;
   display: inline-block;
   box-sizing:border-box;
+  line-height: 30px;
 }
 .cal-notlive{
   color:#d6d6d6;
 }
 .cal-live{
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items:center;
   font-size:10px;
   color:#099fde;
   height:100%;
   box-sizing:border-box;
+  line-height: 1.2!important;
 }
 .cal-live-content{
   font-size:10px;

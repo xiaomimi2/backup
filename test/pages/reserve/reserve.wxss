@@ -32,24 +32,27 @@
 }
 
 .hotel_intr .icon-box {
-  height: 121.875rpx;
+  min-height: 121.875rpx;
   width: 100%;
-  display: flex;
-  align-items: center;
   box-shadow: 0 2px 0px 0 #e4e4e4;
   padding: 0 25rpx;
+  overflow: hidden;
   box-sizing: border-box;
 }
 
 .icon-box .icon-box-item {
+  width:16%;
+  margin-right:0.6%;
+  margin-bottom:5px;
+  height:54px;
+  display: flex;
+  float:left;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-right: 50rpx;
+  white-space: nowrap;
 }
-
-
 
 .hotel_intr .icon-box .iconfont {
   font-size: 41.66rpx;

@@ -18,13 +18,13 @@
   </view>
 
   <view class="navbar">
-    <navigator  >
+    <navigator url="/pages/test/test">
       <image/>酒店超市</navigator>
     <navigator>
       <image/>房间续住</navigator>
     <navigator url="/pages/ticket/ticket">
       <image/>预约开票</navigator>
-    <navigator url="/pages/reserve/reserve">
+    <navigator url="/pages/reserve/reserve?id=178">
       <image/>房间预定</navigator>
   </view>
   <view class="tab">
