@@ -1,2 +1,35 @@
-<!--pages/market/market.wxml-->
-<text>pages/market/market.wxml</text>
+<view class="container">
+  <view class="page-title">
+    <image/>
+    <view class="page-content">
+      <text>酒店超市</text>
+      <text>选择续住时间后直接提交订单即可完成续住。</text>
+    </view>
+  </view>
+  <view class="main_market">
+    <view class="market_left">
+        <view>热销榜</view>
+        <view>零食</view>
+        <view>饮料</view>
+        <view>日用品</view>
+        <view>香烟</view>
+    </view>
+    <view class="market_right">
+        <view class="tabbar">热销榜</view>
+        <view class="market_list">
+            <image/>
+            <view class="market_list_info">
+              <view class="info_name">碗面 Noodle</view>
+              <view class="info_size">规格：碗</view>
+              <view class="info_total">剩余：1</view>
+              <view class="info_price">¥ 10</view>
+            </view>
+            <view class="market_op">
+              <view class="market_submit">+</view>
+              <view class="market_text">1</view>
+              <view class="market_plus">-</view>
+           </view>
+        </view>
+    </view>
+  </view>
+</view>

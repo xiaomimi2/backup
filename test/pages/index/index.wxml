@@ -18,9 +18,9 @@
   </view>
 
   <view class="navbar">
-    <navigator url="/pages/test/test">
+    <navigator url="/pages/market/market">
       <image/>酒店超市</navigator>
-    <navigator>
+    <navigator url="/pages/rereserve/rereserve">
       <image/>房间续住</navigator>
     <navigator url="/pages/ticket/ticket">
       <image/>预约开票</navigator>
