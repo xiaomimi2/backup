@@ -9,17 +9,17 @@
   <view class="ticket-content">
     <view class="ticket-content-child">
       <text>发票类型：</text>
-      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="ticketType" value="{{ticketTypeIndex}}">{{ticketType[ticketTypeIndex]}}</picker>
+      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="{{ticketType}}" value="{{ticketTypeIndex}}">{{ticketType[ticketTypeIndex]}}</picker>
       <image/>
     </view>
     <view class="ticket-content-child">
       <text>发票内容：</text>
-      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="ticketContent" value="{{ticketContentIndex}}">{{ticketContent[ticketContentIndex]}}</picker>
+      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="{{ticketContent}}" value="{{ticketContentIndex}}">{{ticketContent[ticketContentIndex]}}</picker>
       <image/>
     </view>
     <view class="ticket-content-child">
       <text>发票抬头类型：</text>
-      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="ticketHeaderType" value="{{ticketHeaderTypeIndex}}">{{ticketHeaderType[ticketHeaderTypeIndex]}}</picker>
+      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="{{ticketHeaderType}}" value="{{ticketHeaderTypeIndex}}">{{ticketHeaderType[ticketHeaderTypeIndex]}}</picker>
       <image/>
     </view>
     <view class="ticket-content-child">

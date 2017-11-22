@@ -28,10 +28,11 @@ view{
   width: 112.5rpx;
   height: 112.5rpx;
   background-color: #ccc;
+  margin-right:33.333rpx;
 }
 
 .page-content {
-  width: 71.66%;
+ flex-grow:1;
   color: #fff;
 }
 
