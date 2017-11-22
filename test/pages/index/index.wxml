@@ -29,7 +29,7 @@
   </view>
   <view class="tab">
     <view class="tab-item" data-name="tel" bindtap="switchServe">
-      <image/>电话求助</view>
+      <image/>电话求助 <view class="active_border"></view></view>
     <view class="tab-item" data-name="complain" bindtap="switchServe">
       <image/>投诉建议</view>
     <view class="tab-item" data-name="wifi" bindtap="switchServe">

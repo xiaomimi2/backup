@@ -65,6 +65,7 @@ navigator {
   align-items:center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
 .tab-item image{
   width:50rpx;
@@ -213,4 +214,14 @@ textarea {
 
 .tab-content-1 .item-value:last-child{
   margin-bottom:41.66rpx;
+}
+
+.active_border{
+  position:absolute;
+  bottom:-35.416rpx;
+  left:50%;
+  transform:translateX(-50%);
+  width:62.5rpx;
+  background-color:#4786D0;
+  height:2px;
 }
