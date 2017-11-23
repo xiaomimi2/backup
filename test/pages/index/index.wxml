@@ -40,7 +40,8 @@
       <image src="../../assets/image/icon/sweep.png"/>房间打扫<view class="active_border" hidden="{{currentPage != 'sweep'}}"></view></view>
   </view>
   <view class="tab-content-1" wx:if="{{currentPage === 'tel'}}">
-    <button class="btn-concat" open-type="concat">总机</button>
+    <!-- <button class="btn-concat" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">测试用户电话</button> -->
+     <button class="btn-concat" open-type="concat">总机</button>
     <button class="btn-concat" open-type="concat">宴会预定</button>
   </view>
   <view class="tab-content-1" wx:if="{{currentPage === 'sweep'}}">

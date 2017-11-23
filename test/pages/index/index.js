@@ -1,3 +1,4 @@
+
 //index.js
 //获取应用实例
 const app = getApp()
@@ -10,6 +11,11 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     currentPage:'tel',
     minTab:1
+  },
+  getPhoneNumber:function (e){
+    console.log(e.detail.encryptedData)
+    console.log(e.detail.iv)
+    //上述两个数值需要被解密。具体解密可以通过后台接口来进行。
   },
   //事件处理函数
   bindViewTap: function() {
