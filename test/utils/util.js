@@ -139,25 +139,213 @@ const wxBaseInfo = () => {
 /**微信授权  1.2.0版本开始支持,会立刻弹窗询问用户是否同意授权小程序使用某项功能或获取用户的某些数据，但不会实际调用对应接口
  * scope.userInfo
 */
-const authFn = () => {
+const authInvoiceTitle = (obj, fn) => {
   wx.getSetting({
     success(res) {
       if (!res.authSetting['scope.invoiceTitle']) {
         wx.authorize({
-          scope: 'scope.record',
+          scope: 'scope.invoiceTitle',
           success() {
             // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
-            wx.wx.chooseInvoiceTitle()
+            console.log('调用了')
+            wx.chooseInvoiceTitle({
+              success: function (res){
+                fn.call(obj,res)
+              }
+            })
+          },
+          fail() {
+            console.log('此权限被放弃了')
+            //提示可以通过打开设置打开这个权限
+            wx.showModal({
+              title: '已禁止发票信息权限',
+              content: '可以通过确认键重新打开权限,或者稍后需要的时候可以通过点击右上角，选择关于xx,然后再点击右上角选择设置，进去设置相关的权限',
+              success: function (res) {
+                console.log(res)
+                wx.openSetting({
+                  success: (res) => {
+                    console.log(res)
+                    /*
+                     * res.authSetting = {
+                     *   "scope.userInfo": true,
+                     *   "scope.userLocation": true
+                     * }
+                     */
+                  }
+                })
+              }
+            })
           }
         })
+      } else {
+        console.log('发票抬头')
+        wx.chooseInvoiceTitle({
+          success: function (res) {
+             fn.call(obj, res)
+          },
+          fail: function () {
+            wx.showModal({
+              title: '提示',
+              content: '这是测试取消',
+              success: function (res) {
+                if (res.confirm) {
+                  console.log('用户点击确定')
+                } else if (res.cancel) {
+                  console.log('用户点击取消')
+                }
+              }
+            })
+          }
+        })
+
+      }
+    }
+  })
+}
+/**
+ * 验证获取定位
+ * 用这个方法可以获取经纬度
+  altitude
+  longitude
+ */
+const authGetLocation = (obj, fn) => {
+  wx.getSetting({
+    success(res) {
+      if (!res.authSetting['scope.userLocation']) {
+        wx.authorize({
+          scope: 'scope.userLocation',
+          success() {
+            // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+            console.log('调用了')
+            wx.getLocation({
+              success: function (res) {
+                fn.call(obj, res)
+              }
+            })
+          },
+          fail() {
+            console.log('此权限被放弃了')
+            //提示可以通过打开设置打开这个权限
+            wx.showModal({
+              title: '已禁止定位权限',
+              content: '可以通过确认键重新打开权限,或者稍后需要的时候可以通过点击右上角，选择关于xx,然后再点击右上角选择设置，进去设置相关的权限',
+              success: function (res) {
+                console.log(res)
+                wx.openSetting({
+                  success: (res) => {
+                    console.log(res)
+                    /*
+                     * res.authSetting = {
+                     *   "scope.userInfo": true,
+                     *   "scope.userLocation": true
+                     * }
+                     */
+                  }
+                })
+              }
+            })
+          }
+        })
+      } else {
+        console.log('获取地址')
+        wx.getLocation({
+          success: function (res) {
+            console.log(res)
+            fn.call(obj,res)
+          },
+          fail: function () {
+            wx.showModal({
+              title: '提示',
+              content: '这是测试取消',
+              success: function (res) {
+                if (res.confirm) {
+                  console.log('用户点击确定')
+                } else if (res.cancel) {
+                  console.log('用户点击取消')
+                }
+              }
+            })
+          }
+        })
+
+      }
+    }
+  })
+}
+
+/**
+ * 验证获取通讯地址
+ */
+const authGetTelAddress = (obj, fn) => {
+  wx.getSetting({
+    success(res) {
+      if (!res.authSetting['scope.address']) {
+        wx.authorize({
+          scope: 'scope.address',
+          success() {
+            // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+            console.log('通讯地址')
+            wx.chooseAddress({
+              success: function (res) {
+                fn.call(obj, res)
+              }
+            })
+          },
+          fail() {
+            console.log('此权限被放弃了')
+            //提示可以通过打开设置打开这个权限
+            wx.showModal({
+              title: '已禁止调用通讯地址',
+              content: '可以通过确认键重新打开权限,或者稍后需要的时候可以通过点击右上角，选择关于xx,然后再点击右上角选择设置，进去设置相关的权限',
+              success: function (res) {
+                console.log(res)
+                wx.openSetting({
+                  success: (res) => {
+                    console.log(res)
+                    /*
+                     * res.authSetting = {
+                     *   "scope.userInfo": true,
+                     *   "scope.userLocation": true
+                     * }
+                     */
+                  }
+                })
+              }
+            })
+          }
+        })
+      } else {
+        console.log('获取地址')
+        wx.chooseAddress({
+          success: function (res) {
+            console.log(res)
+            fn.call(obj, res)
+          },
+          fail: function () {
+            wx.showModal({
+              title: '提示',
+              content: '这是测试取消',
+              success: function (res) {
+                if (res.confirm) {
+                  console.log('用户点击确定')
+                } else if (res.cancel) {
+                  console.log('用户点击取消')
+                }
+              }
+            })
+          }
+        })
+
       }
     }
   })
 }
 
 
-
 module.exports = {
   formatTime: formatTime,
-  serviceImageTable: serviceImageTable
+  serviceImageTable: serviceImageTable,
+  authGetTelAddress: authGetTelAddress,
+  authInvoiceTitle: authInvoiceTitle,
+  authGetLocation: authGetLocation
 }
