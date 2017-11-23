@@ -2,6 +2,9 @@
 .container{
   background-color: #f6f6f6;
 }
+.page-title .page-image{
+  background-color:#F89536;
+}
 .hotel_intr {
   background-color: #fff;
   font-size: 25rpx;

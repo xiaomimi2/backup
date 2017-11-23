@@ -1,6 +1,6 @@
 <view class="container">
   <view class="page-title">
-    <image/>
+    <view class="page-image"><image src="../../assets/image/money.png"/></view>
     <view class="page-content">
       <text>房间预定</text>
       <text>您可在此直接预定其他房间。</text>

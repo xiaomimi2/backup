@@ -1,6 +1,8 @@
 <view class="container">
   <view class="page-title">
-    <image/>
+    <view class="page-image">
+      <image src="../../assets/image/money.png" />
+    </view>
     <view class="page-content">
       <text>预约开票</text>
       <text>选择续住时间后直接提交订单即可完成续住。</text>
@@ -19,18 +21,37 @@
     </view>
     <view class="ticket-content-child">
       <text>发票抬头类型：</text>
-      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="{{ticketHeaderType}}" value="{{ticketHeaderTypeIndex}}">{{ticketHeaderType[ticketHeaderTypeIndex]}}</picker>
+      <picker class="ticket-picker" bindchange="bindTicketType" mode="selector" range="{{ticketHeaderType}}" value="{{ticketInfo.type}}">{{ticketHeaderType[ticketInfo.type]}}</picker>
       <image/>
     </view>
-    <view class="ticket-content-child">
+    <!-- <view class="ticket-content-child">
       <text>发票抬头：</text>
-      <input type="text"></input>
-
-    </view>
+      <input type="text" value="{{ticketInfo.title}}"></input>
+    </view> -->
     <view class="ticket-content-child">
       <text>添加税号：</text>
-      <input type="number"></input>
-
+      <input type="number" value="{{ticketInfo.taxNumber}}"></input>
+    </view>
+    <view class="ticket-content-child">
+      <text>企业名称</text>
+      <input type="text" value="{{ticketInfo.title}}"></input>
+    </view>
+    <view class="ticket-content-child">
+      <text>单位地址</text>
+      <input type="text" value="{{ticketInfo.companyAddress}}"></input>
+    </view>
+    <view class="ticket-content-child">
+      <text>电话号码</text>
+      <input type="text" value="{{ticketInfo.telephone}}"></input>
+    </view>
+    <view class="ticket-content-child">
+      <text>开户银行</text>
+      <input type="text" value="{{ticketInfo.bankName}}"></input>
+    </view>
+    <view class="ticket-content-child">
+      <text>银行账户</text>
+      <input type="text" value="{{ticketInfo.bankAccount}}"></input>
     </view>
   </view>
+  <view class="sendTo"></view>
 </view>

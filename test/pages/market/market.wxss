@@ -1,3 +1,10 @@
+.page-title .page-image{
+  background-color:#A75DCE;
+}
+.page-title .page-image image{
+  width:43.75rpx;
+  height:29.166rpx;
+}
 .main_market {
   width: 100%;
   display: flex;
@@ -92,10 +99,9 @@
   width: 33.33rpx;
   height: 33.33rpx;
   border-radius: 50%;
-  line-height: 33.33rpx;
+  line-height: 30rpx;
   vertical-align: middle;
   text-align: center;
-  font-size:41.666rpx;
 }
 .market_submit{
   border:1px solid #ccc;

@@ -24,11 +24,24 @@ view{
   justify-content: space-between;
 }
 
-.page-title image {
+.page-title .page-image {
   width: 112.5rpx;
   height: 112.5rpx;
-  background-color: #ccc;
   margin-right:33.333rpx;
+  position:relative;
+
+  border: 2px solid #FFFFFF;
+  border-radius:50%;
+}
+.page-title .page-image image{
+  width:34.791rpx;
+  height:45.833rpx;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
 }
 
 .page-content {

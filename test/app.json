@@ -17,14 +17,19 @@
     "navigationBarTextStyle": "#fff"
   },
   "tabBar": {
+    "color":"#C2C3C4",
+    "selectedColor":"#2C75CA",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页"
+        "text": "首页",
+        "iconPath":"/assets/image/bicon/home.png",
+        "selectedIconPath":"/assets/image/bicon/home.png"
       },
       {
         "pagePath": "pages/mine/mine",
-        "text": "我的"
+        "text": "我的",
+        "iconPath": "/assets/image/bicon/my.png"
       }
     ]
   }

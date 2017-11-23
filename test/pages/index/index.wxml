@@ -19,25 +19,25 @@
 
   <view class="navbar">
     <navigator url="/pages/market/market">
-      <image/>酒店超市</navigator>
+      <image src="../../assets/image/market.png"/>酒店超市</navigator>
     <navigator url="/pages/rereserve/rereserve">
-      <image/>房间续住</navigator>
+      <image src="../../assets/image/rereserve.png"/>房间续住</navigator>
     <navigator url="/pages/ticket/ticket">
-      <image/>预约开票</navigator>
+      <image src="../../assets/image/ticket.png"/>预约开票</navigator>
     <navigator url="/pages/reserve/reserve?id=178">
-      <image/>房间预定</navigator>
+      <image src="../../assets/image/reserve.png"/>房间预定</navigator>
   </view>
   <view class="tab">
     <view class="tab-item" data-name="tel" bindtap="switchServe">
-      <image/>电话求助 <view class="active_border"></view></view>
+      <image src="../../assets/image/icon/tel.png"/>电话求助 <view class="active_border" hidden="{{currentPage != 'tel'}}"></view></view>
     <view class="tab-item" data-name="complain" bindtap="switchServe">
-      <image/>投诉建议</view>
+      <image src="../../assets/image/icon/complain.png"/>投诉建议<view class="active_border" hidden="{{currentPage != 'complain'}}"></view></view>
     <view class="tab-item" data-name="wifi" bindtap="switchServe">
-      <image/>Wi-Fi</view>
+      <image src="../../assets/image/icon/wifi.png"/>Wi-Fi<view class="active_border" hidden="{{currentPage != 'wifi'}}"></view></view>
     <view class="tab-item" data-name="borrow" bindtap="switchServe">
-      <image/>物品借用</view>
+      <image src="../../assets/image/icon/borrow.png"/>物品借用<view class="active_border" hidden="{{currentPage != 'borrow'}}"></view></view>
     <view class="tab-item" data-name="sweep" bindtap="switchServe">
-      <image/>房间打扫</view>
+      <image src="../../assets/image/icon/sweep.png"/>房间打扫<view class="active_border" hidden="{{currentPage != 'sweep'}}"></view></view>
   </view>
   <view class="tab-content-1" wx:if="{{currentPage === 'tel'}}">
     <button class="btn-concat" open-type="concat">总机</button>

@@ -1,6 +1,6 @@
 <view class="container">
   <view class="page-title">
-    <image/>
+    <view class="page-image"><image src="../../assets/image/money.png"/></view>
     <view class="page-content">
       <text>房间续住</text>
       <text>选择续住时间后直接提交订单即可完成续住</text>

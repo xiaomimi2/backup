@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0rpx 75rpx;
+  padding: 0rpx 37.5rpx;
   box-sizing: border-box;
   height: 187.5rpx;
   box-shadow: 0 2px 4px 0 #e4e4e4;
@@ -27,7 +27,7 @@ navigator {
 .navbar image{
   width:75rpx;
   height:75rpx;
-  background-color: #ccc;
+ 
 }
 .hotel-wrap {
   height: 150rpx;
@@ -41,7 +41,7 @@ navigator {
   background-color: rgba(255, 255, 255, 0.13);
   border-radius: 10px;
   color: #fff;
-  margin: 0rpx 75rpx;
+  margin: 0rpx 37.5rpx;
   font-size: 29.16rpx;
 }
 
@@ -70,7 +70,7 @@ navigator {
 .tab-item image{
   width:50rpx;
   height:50rpx; 
-  background-color:#ccc;
+  
 }
 
 .tab-content-1 {
@@ -218,7 +218,7 @@ textarea {
 
 .active_border{
   position:absolute;
-  bottom:-35.416rpx;
+  bottom:-30rpx;
   left:50%;
   transform:translateX(-50%);
   width:62.5rpx;

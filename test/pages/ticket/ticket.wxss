@@ -1,13 +1,23 @@
 
+.container{
+    height:100%;
+    background-color:#f6f6f6;
+}
+.page-title .page-image{
+  background-color:#63AD2F;
+}
 
 .ticket-content {
-  padding: 0px 25rpx;
+  
   width: 100%;
   box-sizing: border-box;
+  background-color:#fff;
+  box-shadow: 0 2px 2px 0 #E4E4E4;
 }
 
 .ticket-content-child {
   width: 100%;
+  padding: 0px 25rpx;
   height: 83.33rpx;
   display: flex;
   box-sizing: border-box;
@@ -15,6 +25,7 @@
   justify-content: space-between;
   align-items: center;
   color: #4a4a4a;
+  border-bottom:.5px solid #EBEBEB;
 }
 
 .ticket-content-child image {
@@ -33,4 +44,5 @@
 }
 .ticket-content-child  input{
   flex-grow:1;
+  text-align: right;
 }

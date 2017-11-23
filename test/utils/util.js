@@ -115,6 +115,47 @@ const serviceImageTable = function (str) {
   }
   return res
 }
+/**
+ * 
+ */
+const compatibility = (fn, msg) => {
+  if (wx.openBluetoothAdapter) {
+    wx.openBluetoothAdapter()
+  } else {
+    // 如果希望用户在最新版本的客户端上体验您的小程序，可以这样子提示
+    wx.showModal({
+      title: '提示',
+      content: msg || '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
+    })
+  }
+}
+/**
+ * 包括了pixelRatio,version,screenWidth,screenHeight,system,version and so on
+ */
+const wxBaseInfo = () => {
+  return wx.getSystemInfoSync()
+}
+
+/**微信授权  1.2.0版本开始支持,会立刻弹窗询问用户是否同意授权小程序使用某项功能或获取用户的某些数据，但不会实际调用对应接口
+ * scope.userInfo
+*/
+const authFn = () => {
+  wx.getSetting({
+    success(res) {
+      if (!res.authSetting['scope.invoiceTitle']) {
+        wx.authorize({
+          scope: 'scope.record',
+          success() {
+            // 用户已经同意小程序使用录音功能，后续调用 wx.startRecord 接口不会弹窗询问
+            wx.wx.chooseInvoiceTitle()
+          }
+        })
+      }
+    }
+  })
+}
+
+
 
 module.exports = {
   formatTime: formatTime,

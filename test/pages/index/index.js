@@ -8,7 +8,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    currentPage:'tel'
+    currentPage:'tel',
+    minTab:1
   },
   //事件处理函数
   bindViewTap: function() {
