@@ -12,6 +12,16 @@ Page({
     currentPage:'tel',
     minTab:1
   },
+  calling1: function (){
+    wx.makePhoneCall({
+      phoneNumber: '1111111' //仅为示例，并非真实的电话号码
+    })
+  },
+  calling2: function(){
+    wx.makePhoneCall({
+      phoneNumber: '1111111' //仅为示例，并非真实的电话号码
+    })
+  },
   getPhoneNumber:function (e){
     console.log(e.detail.encryptedData)
     console.log(e.detail.iv)
