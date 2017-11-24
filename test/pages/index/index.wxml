@@ -18,13 +18,13 @@
   </view>
 
   <view class="navbar">
-    <navigator url="/pages/market/market">
+    <navigator url="/pages/market/market" hover-class="none">
       <image src="../../assets/image/market.png"/>酒店超市</navigator>
-    <navigator url="/pages/rereserve/rereserve">
+    <navigator url="/pages/rereserve/rereserve" hover-class="none">
       <image src="../../assets/image/rereserve.png"/>房间续住</navigator>
-    <navigator url="/pages/ticket/ticket">
+    <navigator url="/pages/ticket/ticket" hover-class="none">
       <image src="../../assets/image/ticket.png"/>预约开票</navigator>
-    <navigator url="/pages/reserve/reserve?id=178">
+    <navigator url="/pages/reserve/reserve?id=178" hover-class="none">
       <image src="../../assets/image/reserve.png"/>房间预定</navigator>
   </view>
   <view class="tab">

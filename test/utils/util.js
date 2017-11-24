@@ -421,14 +421,19 @@ const checkLogin = () => {
     fail: function () {
       //登录态过期
       console.log('重新登录')
-      wx.login() //重新登录
-
+      wx.login() //重新登录，通过res.code送去后台后去openid,unionid,session_key
     }
   })
 }
+
+/**同步获取第三放平台的config数据 */
+var getThirdFloorConfig = () =>{
+  let extConfig = wx.getExtConfigSync ? wx.getExtConfigSync() : {}
+  return extConfig
+}
 module.exports = {
   formatTime: formatTime,
-  serviceImageTable: serviceImageTable,
+  serviceImageTable: serviceImageTable,   
   authGetTelAddress: authGetTelAddress,
   authInvoiceTitle: authInvoiceTitle,
   authGetLocation: authGetLocation,
